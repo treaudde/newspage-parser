@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  newspage-parser-backend:
+    container_name: newspage-parser-backend
+    image: treaudde/simple-development-environment:latest
+    ports:
+      - "8085:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./config/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+    environment:
+      DB_CONNECTION: ${DB_CONNECTION}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+
+
+
+
