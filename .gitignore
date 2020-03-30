@@ -2,3 +2,4 @@
 kubernetes
 work_files
 .env
+.DS_Store
